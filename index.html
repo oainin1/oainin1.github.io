@@ -38,9 +38,10 @@
 			.login h1{
 				color: aliceblue;
 				text-align: center;
-				font-size: 50px;
+				font-size: 40px;
+				margin-top: 20px;
 			}
-			.login p input{
+			.logindiv p input{
 				width: 30vw;
 				height: 10vh;
 				border: 2px solid aqua;
@@ -48,10 +49,19 @@
 				background: transparent;
 				color: lightseagreen;
 			}
-			.login p{
+			.logindiv p{
 				border: aqua;
 				text-align: center;
 				margin: 7vh;
+			}
+			.photovideo{
+				float: left;
+				width: 15vw;
+				height: 42vh;
+				border: 1px solid aqua;
+				margin-left: 30px;
+			}
+			.logindiv{
 			}
 		</style>
 		<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -62,17 +72,28 @@
 					
 				},1000);
 				
+				
 			});
+			
 		</script>
 	</head>
 	<body>
 		<div id="mainpage">
 			<div class="login">
 				<h1>智能系统登录</h1>
+				<div class="photovideo">
+					<video id="pv"></video>
+				</div>
+				<div class="logindiv">
 				<p><input type="text" class="username" ></p>
 				<p><input type="password" class="password"></p>
+				</div>
+				
 			</div>
 		</div>
+		<canvas id="pca"></canvas>
+		<img id="pim" />
 	</body>
+	<script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script>
 </html>
 
