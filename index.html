@@ -33,11 +33,25 @@
 				left: 0;
 				bottom: 0;
 				right: 0;
+				
 			}
 			.login h1{
 				color: aliceblue;
 				text-align: center;
 				font-size: 50px;
+			}
+			.login p input{
+				width: 30vw;
+				height: 10vh;
+				border: 2px solid aqua;
+				font-size: 10vh;
+				background: transparent;
+				color: lightseagreen;
+			}
+			.login p{
+				border: aqua;
+				text-align: center;
+				margin: 7vh;
 			}
 		</style>
 		<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
@@ -45,6 +59,7 @@
 			$(function(){
 				setTimeout(function(){
 					$('#mainpage').slideDown(1000);
+					
 				},1000);
 				
 			});
@@ -54,6 +69,8 @@
 		<div id="mainpage">
 			<div class="login">
 				<h1>智能系统登录</h1>
+				<p><input type="text" class="username" ></p>
+				<p><input type="password" class="password"></p>
 			</div>
 		</div>
 	</body>
