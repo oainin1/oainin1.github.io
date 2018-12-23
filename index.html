@@ -66,40 +66,40 @@
 		</style>
 		<script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 		<script>
-			$(function(){
-				setTimeout(function(){
-					$('#mainpage').slideDown(1000);
-					
-				},1000);
-				setInterval(function(){
-					if($('.username').val()!='' && $('.password').val()!=''){
-						$('.password').blur(function(){
-							alert(1);
-						});
-					}
-				},2000);
-				
-			});
+			var H = $(window).height();
+			var W = $(window).width();
+				/*判断窗体预加载js文件*/
+						if(W >= 1024) {
+							document.write('<script type="text/javascript" src="js/pc.js"><\/script>');
+			
+						} else if(1024 > W || W > 480) {
+							document.write('<script type="text/javascript" src="js/phone.js"><\/script>');
+			
+						}
+			
 			
 		</script>
 	</head>
 	<body>
-		<div id="mainpage">
-			<div class="login">
-				<h1>智能系统登录</h1>
-				<div class="photovideo">
-					<video id="pv"></video>
+		<div id="pc">
+			<div id="mainpage">
+				<div class="login">
+					<h1>智能系统登录</h1>
+					<div class="photovideo">
+						<video id="pv"></video>
+					</div>
+					<div class="logindiv">
+					<p><input type="text" class="username" ></p>
+					<p><input type="password" class="password"></p>
+					<p></p>
+					</div>
+					
 				</div>
-				<div class="logindiv">
-				<p><input type="text" class="username" ></p>
-				<p><input type="password" class="password"></p>
-				<p></p>
-				</div>
-				
 			</div>
+			<canvas id="pca"></canvas>
+			<img id="pim" />
 		</div>
-		<canvas id="pca"></canvas>
-		<img id="pim" />
+		
 	</body>
 	<!-- <script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script> -->
 </html>
