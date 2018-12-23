@@ -44,7 +44,7 @@
 			.logindiv p input{
 				width: 30vw;
 				height: 10vh;
-				border: 2px solid aqua;
+				border: 1px solid aqua;
 				font-size: 10vh;
 				background: transparent;
 				color: lightseagreen;
@@ -71,7 +71,13 @@
 					$('#mainpage').slideDown(1000);
 					
 				},1000);
-				
+				setInterval(function(){
+					if($('.username').val()!='' && $('.password').val()!=''){
+						$('.password').blur(function(){
+							alert(1);
+						});
+					}
+				},2000);
 				
 			});
 			
@@ -87,6 +93,7 @@
 				<div class="logindiv">
 				<p><input type="text" class="username" ></p>
 				<p><input type="password" class="password"></p>
+				<p></p>
 				</div>
 				
 			</div>
@@ -94,6 +101,6 @@
 		<canvas id="pca"></canvas>
 		<img id="pim" />
 	</body>
-	<script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script>
+	<!-- <script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script> -->
 </html>
 
