@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>Oainin哦爱您</title>
+		<link rel="shortcut icon" href="img/favicon.ico" type=" image/ico" />
 		<style>
 			*{
 				margin: 0;
@@ -59,8 +60,12 @@
 				float: left;
 				width: 15vw;
 				height: 42vh;
-				border: 1px solid aqua;
+				border: 3px double aqua;
 				margin-left: 30px;
+				border-radius: 10px;
+			}
+			.photovideo img{
+				border-radius: 10px;
 			}
 			.logindiv{
 			}
@@ -74,6 +79,7 @@
 		<script>
 			var H = $(window).height();
 			var W = $(window).width();
+			
 				/*判断窗体预加载js文件*/
 						if(W >= 1024) {
 							document.write('<script type="text/javascript" src="js/pc.js"><\/script>');
@@ -92,11 +98,11 @@
 				<div class="login">
 					<h1>智能系统登录</h1>
 					<div class="photovideo">
-						<video id="pv"></video>
+						
 					</div>
 					<div class="logindiv">
 					<p><input type="text" class="username" ></p>
-					<p><input type="password" class="password"></p>
+					<p><input type="password" class="password"  ></p>
 					<p></p>
 					</div>
 					
@@ -114,6 +120,6 @@
 		</div>
 		
 	</body>
-	<!-- <script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script> -->
+	<script>document.write('<script type="text/javascript" src="js/face.js"><\/script>');</script>
 </html>
 
