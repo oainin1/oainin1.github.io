@@ -20,16 +20,79 @@
 				height: 90vh;
 				margin: 5vh auto;
 				background: rgba(11,11,11,0.8);
+				z-index: 2;
+			}
+			#zemu{
+				width: 100vw;
+				height: 100vh;
+				background: rgba(11,11,11,0.6);
+				position: relative;
+				z-index: 1;
+				display: none;
+			}
+			#close{
+				width: 100vw;
+				height: 50px;
+				text-align: right;
+			}
+			#content{
+				width: 100vw;
+				height: 100vw-50px;
 			}
 		</style>
 		<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 		<script>
 			$(function(){
-
+                $('#maindiv').html("<img src='img/xing.png' width='50' height='50' class='add' >");
+				$('.add').css({
+					"margin":"20px 20px 20px 20px"
+				});
+				$('.add').mousemove(function(){
+					$(this).animate({
+						"width":"45px",
+						"height":"45px"
+					});
+				});
+                $('.add').mouseover(function(){
+					$(this).animate({
+						"width":"50px",
+						"height":"50px"
+					});
+					
+				});
+				$('.add').mousedown(function(){
+					$('#zemu').fadeIn(2000);
+				});
+				$('#content').html("<iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=450 src='//music.163.com/outchain/player?type=4&id=349365818&auto=1&height=430'></iframe>");
+				$('.over').click(function(){
+					$('#zemu').slideUp(2000);
+					$(this).animate({
+						"width":"45px",
+						"height":"45px"
+					});
+				});
+				$('.over').mouseleave(function(){
+					$(this).animate({
+						"width":"50px",
+						"height":"50px"
+					});
+				});
 			});
 		</script>
 	</head>
 	<body>
-		<div id="maindiv"></div>
+		<div id="zemu">
+			<div id="close">
+				<img src='img/xing.png' width='50' height='50' class='over' >
+			</div>
+			<div id="content">
+				
+			</div>
+		</div>
+		<div id="maindiv">
+			
+            
+		</div>
+		<div id="wornning"></div>
 	</body>
 </html>
