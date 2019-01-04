@@ -1,1 +1,1 @@
-$('.photovideo').html("<img src='img/IMG_1390.JPG' width='100%' height='100%' >");
+$('.photovideo').html("<img src='http://stroage.oainin.com/4.jpg' width='100%' height='100%' >");
